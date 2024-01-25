@@ -47,7 +47,16 @@ mysql
 - InnoDB의 잠금(레코드 락)은 레코드를 잠그는 것이 아니라 인덱스를 잠그는 방식으로 처리된다. (변경할 레코드를 찾기 위해 검색한 인덱스의 레코드를 모두 락을 건다)
 ---
 ## 격리 수준
-- READ UNCOMMITTED : 
-- READ COMMITTED : 
-- REPEATABLE READ : 
-- SERIALIZABLE : 
+- READ UNCOMMITTED
+  - 일반적으로 사용되지 않는 격리 수준.
+  - 트랜잭션의 변경 내용이 COMMIT, ROLLBACK 여부에 상관없이 다른 트랜잭션에서 보인다. 즉, DIRTY READ가 발생한다.
+- READ COMMITTED
+   - 오라클DBMS 등에서 기본으로 가장 많이 사용되는 격리 수준이다.
+   - COMMIT이 완료된 데이터만 다른 트랜잭션에서 조회 가능하다.
+   - 커밋 전엔, 다른 트랙잭션에서는 언두 로드로 백업된 기존 값을 조회한다.
+   - NON-REPEATABLE READ 이라는 문제 발생가 발생한다. (아래 그림 참고)
+     >![image](https://github.com/shinyeahchan/RealMySQL/assets/93124649/018d277b-64ad-487d-a864-c7909f0f8568)
+- REPEATABLE READ
+   - MySQL의 InnoDB 스토리지 엔진에서 기본으로 사용되는 격리 수준이다.
+- SERIALIZABLE
+   - 

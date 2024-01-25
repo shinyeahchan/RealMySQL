@@ -13,6 +13,8 @@
 | 03. 사용자 및 권한      |[정리 내용](https://github.com/shinyeahchan/RealMySQL/blob/main/RealMySQL_03.md)
 | 04. 아키텍처      |[정리 내용](https://github.com/shinyeahchan/RealMySQL/blob/main/RealMySQL_04.md)
 | 05. 트랜잭션과 잠금  |[정리 내용](https://github.com/shinyeahchan/RealMySQL/blob/main/RealMySQL_05.md)
+| 08. 인덱스  |[정리 내용](https://github.com/shinyeahchan/RealMySQL/blob/main/RealMySQL_08.md)
+
 
 ## 진행 방식
 

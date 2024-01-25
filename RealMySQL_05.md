@@ -17,11 +17,10 @@ mysql
 - ```START TRANSACTION;```을 직접 사용시에는 autocommit이 잠시 off된다.
 
 #### 참고1) JAVA에서의 DB 트랜잭션 코드 예시
-![image](https://github.com/shinyeahchan/RealMySQL/assets/93124649/b2db0b33-bc8d-4a99-b107-d05354ef21fd)
+>![image](https://github.com/shinyeahchan/RealMySQL/assets/93124649/b2db0b33-bc8d-4a99-b107-d05354ef21fd)
 
 #### 참고2) JAVA + Spring 에서의 DB 트랜잭션 코드 예시
-  
-    **@Transactinal** 어노테이션 사용
+>**@Transactinal** 어노테이션 사용
 ![image](https://github.com/shinyeahchan/RealMySQL/assets/93124649/aea6dcbb-eada-44e5-a1b7-1a53ac7599fb)
 #### 참고3) **ACID** 원칙
  - **A**tomicity(원자성)

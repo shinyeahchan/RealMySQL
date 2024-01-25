@@ -60,9 +60,8 @@ mysql
    - MySQL의 InnoDB 스토리지 엔진에서 기본으로 사용되는 격리 수준이다.
    - 자신보다 작은 트랜잭션 번호의 변경사항만 보게 함으로써 NON-REPEATABLE READ 현상이 발생하지 않는다.
      >![image](https://github.com/shinyeahchan/RealMySQL/assets/93124649/31be945b-5efc-4261-8782-2051093fb9a6)
-   - 하지만, SELECT ... FOR UPDATE나 SELECT ... FOR SHARE 등 잠금을 동반한 SELECT 쿼리에서 PHANTOM READ 현상이 발생할 수 있다.
-     > 언두 레코드에는 잠금을 걸 수 없기 때문
-     > 이는 예외적인 상황이다.
+   - 갭 락과 넥스트 키락 덕분에 PHANTOM READ 현상도 발생하지 않는다.
+     > 예외적으로, SELECT ... FOR UPDATE나 SELECT ... FOR SHARE 등 잠금을 동반한 SELECT 쿼리에서는 PHANTOM READ 현상이 발생할 수 있다. 언두 레코드에는 잠금을 걸 수 없기 때문이다.
 - SERIALIZABLE
    - 가장 엄격한 격리수준 -> 동시 처리 성능이 매우 떨어진다.
    - 한 트랜잭션에서 읽고 쓰는 레코드를 다른 트랜잭션에서 절대 접근할 수 없는 것이다.

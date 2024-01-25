@@ -16,14 +16,14 @@ mysql
 - MySQL에서는 autocommit 이 기본적으로 enabled 되어 있어서 자동으로 커밋(오류 시 롤백)을 진행한다.
 - ```START TRANSACTION;```을 직접 사용시에는 autocommit이 잠시 off된다.
 
-- 참고1) JAVA에서의 DB 트랜잭션 코드 예시
+#### 참고1) JAVA에서의 DB 트랜잭션 코드 예시
 ![image](https://github.com/shinyeahchan/RealMySQL/assets/93124649/b2db0b33-bc8d-4a99-b107-d05354ef21fd)
 
-- 참고2) JAVA + Spring 에서의 DB 트랜잭션 코드 예시
+#### 참고2) JAVA + Spring 에서의 DB 트랜잭션 코드 예시
   
     **@Transactinal** 어노테이션 사용
 ![image](https://github.com/shinyeahchan/RealMySQL/assets/93124649/aea6dcbb-eada-44e5-a1b7-1a53ac7599fb)
-### 참고3) **ACID** 원칙
+#### 참고3) **ACID** 원칙
  - **A**tomicity(원자성)
    : 트랜잭션의 작업이 **부분적으로 실행되거나 중단되지 않는 것**을 보장하는 것을 말한다. ( **ALL or NOTHING** )
    > **트랜잭션의 단위(언제 commit, 언제 rollback)는 개발자가 챙겨야한다.**
